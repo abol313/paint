@@ -1,3 +1,7 @@
+/*<!--In the name of kindly generous ALLAH-->
+<!--Thanks ALLAH-->
+ */
+
 const canvas = document.getElementById("canvas")
 let canvasBound = canvas.getBoundingClientRect()
 
