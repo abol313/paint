@@ -88,3 +88,7 @@ body{
         0 0 0px 100px #0ff0;
     }
 }
+
+*{
+    user-select:none;
+}
