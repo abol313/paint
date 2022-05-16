@@ -61,12 +61,12 @@ canvas.addEventListener("mousemove", (ev) => draw(ev.x - canvasBound.x, ev.y - c
 canvas.addEventListener("mouseup", (ev) => endDraw(ev.x - canvasBound.x, ev.y - canvasBound.y))
 
 //touch
-canvas.addEventListener("touchmove", (ev) => overDraw(ev.touches[0].pageX - canvasBound.x, ev.touches[0].pageY - canvasBound.y))
-canvas.addEventListener("touchend", (ev) => leaveDraw(0, 0))
+canvas.addEventListener("touchmove", (ev) => {ev.preventDefault();overDraw(ev.touches[0].pageX - canvasBound.x, ev.touches[0].pageY - canvasBound.y)})
+canvas.addEventListener("touchend", () => leaveDraw(0, 0))
 
 canvas.addEventListener("touchstart", (ev) => startDraw(ev.touches[0].pageX - canvasBound.x, ev.touches[0].pageY - canvasBound.y))
-canvas.addEventListener("touchmove", (ev) => draw(ev.touches[0].pageX - canvasBound.x, ev.touches[0].pageY - canvasBound.y))
-canvas.addEventListener("touchend", (ev) => endDraw(0, 0))
+canvas.addEventListener("touchmove", (ev) => {ev.preventDefault();draw(ev.touches[0].pageX - canvasBound.x, ev.touches[0].pageY - canvasBound.y);})
+canvas.addEventListener("touchend", () => endDraw(0, 0))
 
 
 
