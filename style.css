@@ -36,6 +36,7 @@ body{
                0 0 0px 15px #0ff5,
                0 0 0px 30px #0ff1;
     border-radius:200px;
+    transition:background-color 300ms ease-in,color 300ms ease-out;
     animation:anim_waves 1s infinite;
 }
 
